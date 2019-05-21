@@ -10,7 +10,7 @@ import pygame
 
 def start_sound():
     pygame.mixer.init()
-    pygame.mixer.music.load("C:\\Users\\B.Vishnu charan\\Desktop\\VISHNU FILES\\FOURTH SEMESTER\\IMAGE PROCESSING\\HAAR CASCADES\\Activated_fire_alarm_(sound).ogg")
+    pygame.mixer.music.load("/Activated_fire_alarm_(sound).ogg") #Enter the path where you have saved your fire_alarm sound
     pygame.mixer.music.play()
 
 
@@ -56,8 +56,8 @@ def eye_aspect_ratio(eye):
 
 camera = cv2.VideoCapture(0)
 
-predictor_path = 'C:\\Users\\B.Vishnu charan\\Desktop\\VISHNU FILES\\FOURTH SEMESTER\\IMAGE PROCESSING\\HAAR CASCADES\\shape_predictor_68_face_landmarks.dat_2'
-
+predictor_path = '\\shape_predictor_68_face_landmarks.dat_2'  #Enter the path where you have saved your shape_predictor
+  
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(predictor_path)
 (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
